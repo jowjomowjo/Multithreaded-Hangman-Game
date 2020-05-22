@@ -1,0 +1,5 @@
+g++ -pthread game_server.cpp -o game_server
+./game_server 10670   
+
+g++ game_client.cpp -o game_client
+./game_client 10.124.72.20 10670 

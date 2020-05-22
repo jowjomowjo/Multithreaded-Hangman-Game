@@ -1,0 +1,30 @@
+Here is a more detailed description of the client: 
+ 
+1. Start the client with two required command line arguments (in this order): 
+   o Required arguments are:   
+      IP address of the server  
+      port of the server process (use one of the ports assigned to you - see below) 
+   o Print an error and exit if the necessary command line arguments are not provided, or they are not valid   
+     e.g., giving "foo" for the port number would be invalid, since it is clearly not a number  
+     Do not spend effort writing complicated code to check if numbers and IP addresses are valid - 
+     there are functions available that will produce errors if given invalid data (number of IP addresses), 
+     so all you need to do is handle the errors returned from those functions. 
+2. Connect to the server. Exit with an appropriate error message if a connection could not be established. 
+3. Ask the user for their name. 
+4. Send the name to the server. 
+5. Ask the user for a guess. 
+6. You may check the user input for validity if you want - but you still need to check it on the server as well, 
+   even if you check it here, though! If the guess is invalid, print an error message and go back to step 5. 
+7. Send the guess to the server. 
+8. Receive the guess response from the server.
+9. If the guess was incorrect, print the number of guesses to the screen and go back to step 5. 
+   If the guess was a correct letter guess, the client should print the number of guesses and display all letters the 
+   player has correctly guessed so far with some character (e.g., - or _ ) to indicate spaces where the letter has not 
+   yet been guessed correctly. (For example, if the word is "HELLO" and the player has previously guessed 'H', 'A', and 
+   just guessed 'L', then you would print H_LL_ ) 
+ 
+Note: The remaining steps are only carried out if the guess was successful. 
+10. If the player made a correct guess and it was the last letter needed, print the complete word and number of guesses taken to the screen. 
+11. Receive leader board information from the server. 
+12. Print leader board information to the screen. 
+13. Close the connection with the server.   

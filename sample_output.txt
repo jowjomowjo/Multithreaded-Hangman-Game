@@ -1,0 +1,39 @@
+Welcome to Hangman! 
+Enter your name:  Alice   
+
+Turn 1 
+Word: ------ 
+Enter your guess: E 
+Correct!   
+
+Turn 2 Word: -E--E- 
+Enter your guess: M 
+Incorrect!   
+
+Turn 3 
+Word: -E--E- 
+Enter your guess: n 
+Correct!   
+
+Turn 4 
+Word: -E-NE- 
+Enter your guess: k 
+Correct!   
+
+Turn 5 
+Word KE-NE- 
+Enter your guess: L 
+Correct!   
+
+Turn 6
+Word KE-NEL 
+Enter your guess: r 
+Correct!   
+
+Congratulations! You guessed the word KERNEL!! 
+It took 6 turns to guess the word correctly.   
+
+Leader board: 
+   1. Mark  0.83
+   2. Alice 1.00 
+   3. Beth  1.25   

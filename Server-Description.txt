@@ -1,0 +1,26 @@
+Here is a more detailed description of the multithreaded server: 
+ 
+1. Start the server which has one required command line argument:  
+   o port number (use one of the ports assigned to you - see below) 
+2. Listen for a client. (You should listen on the provided port number and INADDR_ANY address.) 
+3. When a client connects, create a new thread to process that client (see below). 
+4. The server will run forever until aborted (Ctrl-C). 
+ 
+The following steps correspond how to process each client: 
+1. Choose a word at random for the player (client) to guess.  
+  o Note that each client that connects will get their own unique random word! 
+2. Print the word to the screen (printed on the server process' output; the client process should never know what the word is until the player has guessed it correctly) 
+3. The first communication step is to receive the player's name from the client.
+4. Then receive a guess of from the client.  Check that the guess is valid! 
+5. If the guess was not the final guess for the word, send the result of the guess and go back to step 4. 
+ 
+Note: The remaining steps are only carried out when the player has won.
+6. Send the result of the final guess, as normal.
+7. Update the leader board if the player made the top three. 
+8. Send the current leader board to the client.  
+   o Note that the scores are floating point numbers - there are minor complications sending binary floating-point numbers over the network.
+     However, sending strings is relatively easier. Feel free to send the entire leaderboard as one string (possibly containing newline 
+     characters in the string, if necessary). 
+   o The leaderboard should be displayed with scores to two decimal places (although position in the leader board may be determined by the
+     complete floating-point values – so apparent ties may not really be ties). 
+9. Close the connection with the client. 
